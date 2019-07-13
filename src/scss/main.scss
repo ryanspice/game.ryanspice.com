@@ -71,7 +71,7 @@ main {
 
 
 
-		&.pane {
+		&.pane, & video {
 			margin-left: 0;
 			position: relative;
 			left: -3px;
@@ -89,6 +89,20 @@ main {
 			border-radius: 7px !important;
 			font-weight: bold;
 			text-shadow: 0 1px #000000;
+
+
+
+			//max-width:975px;
+			display:block;
+			background: black;
+			border-radius: 7px;
+			font-size: 1.015em;
+			width: 95vw;
+			margin-left: 0px;
+			position: relative;
+			left: 6px;
+			margin:0px auto;
+			margin-top:3rem;
 
 			h2 {
 				text-align: center;

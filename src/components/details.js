@@ -10,7 +10,7 @@ class Pane extends AsyncView {
 	renderTo: string = `main`;
 	sequence: number = 3;
 	className: string = `pane`;
-	style: string = `max-width:975px;display:block;background: black; border-radius: 7px; font-size: 1.015em; width: 50vw; margin-left: 0px; position: relative; left: -3px; margin:0px auto;`;
+	style: string = ``;
 	innerHTML: string = ``;
 
 	constructor(data) {

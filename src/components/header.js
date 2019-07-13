@@ -8,7 +8,7 @@ class Header extends V {
 
 	type: string = `header`;
 	renderTo: string = `main`;
-	style = `margin-top:1vh; `
+	style = `margin-top:45.25vh; `
 	className = ``;
 	mounted: any = () => {
 

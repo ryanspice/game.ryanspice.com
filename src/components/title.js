@@ -10,10 +10,10 @@ class Title extends AsyncView {
 	renderTo: string = `main`;
 	sequence: number = 2;
 	className: string = ``
-	style:string = `color:white;width:100%;text-align:center;height:23vh;`;
+	style:string = `color:white;width:100%;text-align:center;height:26vh;`;
 	innerHTML: string = `
 
 	`;
 }
 
-export default new Title();
+//export default new Title();
