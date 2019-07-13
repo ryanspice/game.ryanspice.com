@@ -16,7 +16,6 @@ class Video extends AsyncView {
 			Your browser does not support the video tag.
 	`;
 	mounted = function(e){
-		console.log(this);
 		this.setAttribute('controls','');
 	}
 }

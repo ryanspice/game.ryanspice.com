@@ -9,9 +9,10 @@ class Title extends AsyncView {
 	type: string = 'h1';
 	renderTo: string = `main`;
 	sequence: number = 2;
-	style:string = `color:white;width:100%;text-align:center;`;
+	className: string = ``
+	style:string = `color:white;width:100%;text-align:center;height:23vh;`;
 	innerHTML: string = `
-		SnowBoarding
+
 	`;
 }
 
