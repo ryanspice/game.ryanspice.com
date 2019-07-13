@@ -1169,7 +1169,8 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
 									App.client.update.fullscale = !App.client.update.fullscale;
 								},
 								title:function(title){
-									return document.title==title?true:(document.title=title);
+									return document.title;//document.title==title?true:(document.title=title);
+									//return document.title==title?true:(document.title=title);
 								},
 								debug:{
 									prototype:{
