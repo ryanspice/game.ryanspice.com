@@ -10,7 +10,15 @@ class Video extends AsyncView {
 	renderTo: string = `main`;
 	sequence: number = 3;
 	className:string = ``;
-	style:string = `max-width:1024px;display:block;background: black; border-radius: 7px; font-size: 1.015em; width: 95vw; margin-left: 0px; position: relative; left: 6px; margin:0px auto; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;`;
+	style:string = `
+
+	-webkit-box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+	-moz-box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+	box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+
+	border-top:0px;
+
+	max-width:1024px;display:block;background: black; border-radius: 7px; font-size: 1.015em; width: 95vw; margin-left: 0px; position: relative; left: 6px; margin:0px auto; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;`;
 	innerHTML: string = `
 	<div class=" writeup" style="font-size: 1.239em; width: 98%; margin-left: 0px;">
 

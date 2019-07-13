@@ -69,7 +69,10 @@ main {
 
 	section {
 
+		& video {
 
+				border-bottom:none 0px;
+		}
 
 		&.pane, & video {
 			margin-left: 0;
@@ -79,14 +82,12 @@ main {
 			margin: 1%;
 			padding: 1%;
 			background: rgba(0,0,64,0.75);
-			border-radius: 0;
 			-webkit-box-shadow: 0 0 2px 1px rgba(0,0,244,0.75);
 			-moz-box-shadow: 0 0 2px 1px rgba(0,0,244,0.75);
 			box-shadow: 0 0 2px 1px rgba(0,0,244,0.75);
 			color: white;
 			margin: 1vh auto;
 			min-height: 15vh;
-			border-radius: 7px !important;
 			font-weight: bold;
 			text-shadow: 0 1px #000000;
 
@@ -103,6 +104,24 @@ main {
 			left: 6px;
 			margin:0px auto;
 			margin-top:3rem;
+
+			/** COLOURS TO LOAD **/
+
+
+			/** REVERENCE **/
+					//padding:4px;
+					//width:340px;
+					background:rgba(75,25,25,0.75);
+					-webkit-box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+					-moz-box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+					box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+					color:white;
+					//margin:1%;
+					//border-radius: 7px !important;
+					color:#DDAADD;font-family:Syncopate;
+
+
+/** **/
 
 			h2 {
 				text-align: center;
@@ -270,3 +289,44 @@ main {
 @import './footer.scss';
 @import './console.scss';
 @import './copy.scss';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        * {
+         font-family:Droid+Sans;
+                    }
+        body {
+        }
+        .pane, .border_nav {
+
+            //padding:4px;
+            //width:340px;
+            background:rgba(75,25,25,0.75);
+            -webkit-box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+            -moz-box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+            box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+            color:#DDAADD;font-family:Syncopate;
+					}
+        .border_nav:hover {
+		  -webkit-opacity: 1 !important;
+		  -moz-opacity: 1 !important;
+		  opacity: 1 !important;
+		-webkit-transition: opacity 0.4s ease;
+		  -moz-transition:  opacity 0.4s ease;
+		  -ms-transition:   opacity 0.4s ease;
+		  -o-transition:    opacity 0.4s ease;
+		  transition:       opacity 0.4s ease;//s ease;
+        }

@@ -10,9 +10,6 @@ class Pane extends AsyncView {
 	renderTo: string = `main`;
 	sequence: number = 3;
 	className: string = `pane`;
-	style: string = ``;
-	innerHTML: string = ``;
-
 	constructor(data) {
 		super();
 		this.innerHTML = data.text;
@@ -24,6 +21,6 @@ export default [
 		text:`<h2>details</h2>`
 	}),
 	new Pane({
-		text:`<img class="galleryImg" src="images/SnowBoarding/preview_SnowBoarding3.png" style="position: relative; opacity: 1.07149;">`
+		text:`<img class="galleryImg" src="" style="position: relative; opacity: 1.07149;">`
 	})
 ];

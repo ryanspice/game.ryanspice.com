@@ -14,11 +14,10 @@ class Video extends AsyncView {
 	max-width:1080px;
 	display:block;
 	background: black;
-	border-radius: 7px;
 	font-size: 1.015em;
 	width: 95vw;
 	margin-left: 0px;
-	position: relative; left: 6px; margin:0px auto; 
+	position: relative; left: 6px; margin:0px auto;
 	border-bottom-left-radius: 0px !important; border-bottom-right-radius: 0px !important;`;
 
 	innerHTML: string = `
