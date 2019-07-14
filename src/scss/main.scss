@@ -37,20 +37,16 @@ section * {
 @import './breakpoints.scss';
 @import './animations.scss';
 
-main section {}
-
 main {
-	//position: relative;
-	//top: calc(20vh - 50px);
 
 	& * {
 		@extend %fade-top-down;
-		//font-family: 'Niramit', sans-serif;
+		font-family: 'Niramit', sans-serif;
 	}
 
 	a {
 		color: $secondary-color;
-		//text-shadow: $secondary-color 0px 0px 1px;
+
 		&:hover {
 			cursor: pointer;
 			text-decoration: none;
@@ -61,6 +57,7 @@ main {
 			-webkit-animation: bubble 1.0s forwards;
 			/* for less modern browsers */
 		}
+
 	}
 
 	h1 {
@@ -72,6 +69,25 @@ main {
 		& video {
 
 				border-bottom:none 0px;
+		}
+
+		&.pane, &.border_nav {
+			background:rgba(75,25,25,0.75);
+			-webkit-box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+			-moz-box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+			box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
+			color:#DDAADD;font-family:Syncopate;
+		}
+
+		.border_nav:hover {
+			-webkit-opacity: 1 !important;
+			-moz-opacity: 1 !important;
+			opacity: 1 !important;
+			-webkit-transition: opacity 0.4s ease;
+			-moz-transition:  opacity 0.4s ease;
+			-ms-transition:   opacity 0.4s ease;
+			-o-transition:    opacity 0.4s ease;
+			transition:       opacity 0.4s ease;//s ease;
 		}
 
 		&.pane, & video {
@@ -121,20 +137,24 @@ main {
 					color:#DDAADD;font-family:Syncopate;
 
 
-/** **/
+			/** **/
 
 			h2 {
+
 				text-align: center;
+
 			}
+
 		}
 
-
 		@include fluid-type($min_width, $max_width, $min_font, $max_font);
+
 		margin: 0 auto;
 		max-width: 320px;
 		width: calc(-1vw*175vw);
 
 		img {
+
 			margin: 0 auto;
 			text-align: center;
 			display: block;
@@ -142,6 +162,7 @@ main {
 			margin-bottom: 2rem;
 			height: auto;
 			max-width: 32px;
+
 		}
 
 		input {
@@ -185,47 +206,59 @@ main {
 			background: $main-color;
 			color: rgba(255,255,255,0.75);
 		}
+
 	}
 
 	> header {
+
 		> span {
+
 			> a {
+
 				color: rgba(225,225,225,255);
 
 				> svg {
+
 					color: rgba(225,225,225,255);
+
 				}
+
 			}
+
+		}
+
+	}
+
+
+	> header > span > a > svg.feather.feather-twitter {
+		&:hover {
+			color: #38A1F3;
 		}
 	}
-}
 
-main > header > span > a > svg.feather.feather-twitter {
-	&:hover {
-		color: #38A1F3;
+	> header > span > a > svg.feather.feather-linkedin {
+		&:hover {
+			color: #0077B5;
+		}
 	}
-}
 
-main > header > span > a > svg.feather.feather-linkedin {
-	&:hover {
-		color: #0077B5;
+	> header > span > a > svg.feather.feather-github {
+		&:hover {
+			color: #4078c0;
+
+			&:after {}
+		}
 	}
-}
 
-main > header > span > a > svg.feather.feather-github {
-	&:hover {
-		color: #4078c0;
 
-		&:after {}
+	> header > ul > li > div {
+		display: none;
 	}
-}
 
-main > header > ul > li > div {
-	display: none;
-}
+	> header > ul > li:hover > div {
+		display: table;
+	}
 
-main > header > ul > li:hover > div {
-	display: table;
 }
 
 input {
@@ -234,14 +267,18 @@ input {
 }
 
 main {
+
 	section {
+
 		padding: 2.5rem;
 		display: block;
 		max-width: 1080px;
 		margin: 0 auto;
 		color: rgba(255,255,255,0.5);
 		display: block;
+
 	}
+
 }
 
 .acrylic {
@@ -282,49 +319,8 @@ main {
 		position: static !important;
 	}
 }
-@import './traffic.scss';
+
+
 @import './header.scss';
 @import './footer.scss';
-@import './console.scss';
 @import './copy.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        * {
-         font-family:Droid+Sans;
-                    }
-        body {
-        }
-        .pane, .border_nav {
-
-            //padding:4px;
-            //width:340px;
-            background:rgba(75,25,25,0.75);
-            -webkit-box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
-            -moz-box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
-            box-shadow:0 0 2px 1px rgba(25,25,25, 0.75);
-            color:#DDAADD;font-family:Syncopate;
-					}
-        .border_nav:hover {
-		  -webkit-opacity: 1 !important;
-		  -moz-opacity: 1 !important;
-		  opacity: 1 !important;
-		-webkit-transition: opacity 0.4s ease;
-		  -moz-transition:  opacity 0.4s ease;
-		  -ms-transition:   opacity 0.4s ease;
-		  -o-transition:    opacity 0.4s ease;
-		  transition:       opacity 0.4s ease;//s ease;
-        }
