@@ -2426,8 +2426,12 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
 											}
 									},
 									update:function() {
+
+										return;
 										if (typeof this.sound === 'object')
+											if (this.sound[this.current])
 											if (this.sound[this.current].paused)
+											if (this.sound[this.current].play)
 												this.sound[this.current].play();
 										return;
 										if (this.sound[this.current]==="undefined")
