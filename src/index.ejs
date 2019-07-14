@@ -940,7 +940,7 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
 
 <!-- SPICEJS -->
 
-<script  rel="prefetch" type="application/x-javascript">
+<script  rel="prefetch"  defer type="application/x-javascript">
 				/*
 				 ,-.
 				(   `     o            o
@@ -3430,11 +3430,7 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
 		this.flappyfishArray[0] = this.graphics.load("F00","https://ryanspice.com/images/FlappyFish/FlappyFish0");
 		this.flappyfishArray[1] = this.graphics.load("F02","https://ryanspice.com/images/FlappyFish/FlappyFish1");
 		this.flappyfishArray[2] = this.graphics.load("F01","https://ryanspice.com/images/FlappyFish/FlappyFish2");
-
-
-
-
-                            		this.galleryFlappyBackgrounds = [];
+		this.galleryFlappyBackgrounds = [];
 		this.galleryFlappyBackgrounds[0] = this.graphics.load("FF0","https://ryanspice.com/images/FlappyFish/FlappyFishClouds");
 		this.galleryFlappyBackgrounds[1] = this.graphics.load("FF1","https://ryanspice.com/images/FlappyFish/FlappyFishGradient");
 		this.galleryFlappyBackgrounds[2] = this.graphics.load("FF2","https://ryanspice.com/images/FlappyFish/FlappyFishGround");
@@ -3708,7 +3704,7 @@ return;
                             this.sections[9].style.marginBottom='75px';
                             this.sections[9].style.paddingBottom='50px';
 							if (this.sections[1].style.height != this.sections[0].clientHeight-6+"px")
-							this.sections[1].style.height = this.sections[0].clientHeight-6+"px";
+								this.sections[1].style.height = this.sections[0].clientHeight-6+"px";
                             return true;
                             },
                         draw:function() {
@@ -3740,21 +3736,32 @@ return;
     } %>
 
 		-->
-			<!-- Global site tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38949835-1"></script>
-			<script>
-				window.dataLayer = window.dataLayer || [];
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38949835-1"></script>
+
+		<script>
+			window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
-
 		  gtag('config', 'UA-38949835-1');
 		</script>
 
+		<meta name="viewport" content="width=device-width">
 
-			<style>
+		<link rel="manifest" href="./manifest.json">
 
-				@import url("https://fonts.googleapis.com/css?family=Niramit");
+		<link href="https://ryanspice.com/favicon.ico" rel="shortcut icon" type="image/png">
 
+		<style>
+			@import url("https://fonts.googleapis.com/css?family=Niramit");
+		</style>
+
+		<!-- Instant CSS -->
+
+		<style>
+			@import url("https://fonts.googleapis.com/css?family=Niramit");
 			/*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
 			html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;
 				background:rgba(55,55,55,255);
@@ -3778,17 +3785,13 @@ return;
 				body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;
 			//	background-color:#fff;
 			}	input{font-family:inherit;font-size:inherit;line-height:inherit;}
-
-
 			a{
 				color:#3277b3;text-decoration:none;
 			}
-
 			a:focus,a:hover{
 				color:#23527c;
 				text-decoration:underline;
 			}
-
 			a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 			h2,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
 			h2{margin-top:20px;margin-bottom:10px;}
@@ -3814,7 +3817,6 @@ return;
 				text-align:center;
 				z-index:100;
 			}
-
 			.load {
 			  position: absolute;
 			  left: 45%;
@@ -3827,50 +3829,39 @@ return;
 				text-align:center;
 
 			}
-
 			.load-text {
-
 				margin-top:50vh;
 				font-size:calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-				//font-weight:bold;
-				//text-transform: uppercase;
-				font-family: Segoe UI, Open-Sans;
 			}
-
-
 			header {
-
-    margin-top: 0px;
-    padding-top: 0px;
+		  margin-top: 0px;
+		  padding-top: 0px;
 			}
-
-
-		</style>
-			<meta name="viewport" content="width=device-width">
-			<link rel="manifest" href="./manifest.json">
-			<link href="https://ryanspice.com/favicon.ico" rel="shortcut icon" type="image/png">
-
-			<style>
-				@import url("https://fonts.googleapis.com/css?family=Niramit");
 		</style>
 
-			<script prefetch='true' src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script prefetch='true' src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
 </head>
 
 <body>
 
 	<main></main>
+
 	<div id="loader" class="slide hidden" style="display:none;"></div>
 
 	<noscript>Please Enable JavaScript</noscript>
-	<div class="titleDiv" style="font-size: 1em; width: initial; margin-left: 0px;">
-					<h1 class="title_game" style="opacity: 0;">
-						<img style="width:100%;max-width:480px;" src="https://ryanspice.com/images/image_title_ReverenceLost.png">				</h1>
-					<img class="image icon" hidden="" disabled="" style="font-size: 1em; width: 490px; margin-left: 0px;">
-				</div>
+
+	<div class="titleDiv" hidden>
+
+		<h1 class="title_game" style="opacity: 0;">
+
+		<img style="width:100%;max-width:480px;" src="https://ryanspice.com/images/image_title_ReverenceLost.png">				</h1>
+
+		<img class="image icon" hidden="" disabled="" style="font-size: 1em; width: 490px; margin-left: 0px;">
+
+	</div>
 
 	<span class ="galleryImg"> </span>
-</body>
 
+</body>
 </html>
