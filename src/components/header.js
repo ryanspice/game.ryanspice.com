@@ -23,7 +23,9 @@ class Header extends V {
 			<a href="https://www.linkedin.com/in/ryan-spice-finnie-510a295b/" target="_blank"><i data-feather="linkedin" ></i></a>
 		</span>
 
-		<h2 >game.ryanspice.com / ${String(window.location.href.split('=')[1]).toLowerCase()}</h2>
+		<h2 >game.ryanspice.com${
+			window.location.href.split('=')[1]?(" / " + String(window.location.href.split('=')[1]).toLowerCase()):''
+			}</h2>
 
 		<ul>
 
