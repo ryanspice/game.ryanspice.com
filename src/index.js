@@ -53,7 +53,6 @@ ax.post = async function(){
 window.onload = async function onload(evt){
 
 	// get game related data
-	//window.location.href.split('=')[1]
 
 	if (window.location.href.split('?').length>1){
 
