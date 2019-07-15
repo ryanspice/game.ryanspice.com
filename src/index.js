@@ -64,8 +64,6 @@ window.onload = async function onload(evt){
 
 		sessionStorage.setItem('game-ttl', 'infinity');
 
-		//console.log(sessionStorage.getObject('game').data.font)
-
 		const data = sessionStorage.getObject('game').data;
 
 		new V({
@@ -93,6 +91,21 @@ window.onload = async function onload(evt){
 					-webkit-text-fill-color: ${data.colour2};
 					text-outline: 2px ${data.colour2} !important;
 				}
+
+				main section img {
+
+					background:${data.colour2} !important;
+					border-radius: ${data.radius} !important;
+					-webkit-box-shadow:0 0 2px 1px ${data.colour} !important;
+					-moz-box-shadow:0 0 2px 1px ${data.colour} !important;
+					box-shadow:0 0 2px 1px ${data.colour} !important;
+
+				}
+
+				main section.pane {
+					border-radius: ${data.radius} !important;
+				}
+
 			`
 		})
 

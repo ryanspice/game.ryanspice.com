@@ -48,7 +48,11 @@ class Buttons extends AsyncView {
 
 		const data = sessionStorage.getObject('game').data;
 		document.getElementById('bplay').href = data.buttons.play;
-		document.getElementById('bsource').href = data.buttons.source;
+
+		if (data.buttons.source="")
+			document.getElementById('bsource').href = data.buttons.source;
+		else
+			document.getElementById('bsource').remove();
 	}
 }
 
