@@ -7,6 +7,8 @@
 
 import ax from "./entry";
 
+const storage = window.ax = new ax.storage();
+
 /**
  * requires the components folder
  *  - components are loaded automatically and are instanciated by 'sequence'
@@ -23,8 +25,10 @@ require("./components");
 ax.pre = async function(){
 
 	window['async-2018-mvc'].entry.sort((a,b)=>{return (a.sequence?a.sequence:0)-(b.sequence?b.sequence:0)});
-	if(document.getElementsByTagName('loader')[0])
+
+	if(document.getElementsByTagName('loader')[0]){
 		document.getElementsByTagName('loader')[0].remove();
+	}
 
 };
 
@@ -34,7 +38,7 @@ ax.pre = async function(){
 
 ax.post = async function(){
 
-		//await document.body.insertAdjacentHTML( 'beforeend', (`<style>html {background:${e.data.primary} !important;} a {color:${e.data.secondary} !important;}</style>`));
+	//await document.body.insertAdjacentHTML( 'beforeend', (`<style>html {background:${e.data.primary} !important;} a {color:${e.data.secondary} !important;}</style>`));
 
 }
 
@@ -46,10 +50,27 @@ ax.post = async function(){
 
 window.onload = async function onload(evt){
 
-	let storage = new ax.storage();
+	// get game related data
+//window.location.href.split('=')[1]
+	if (window.location.href.split('?').length>1){
 
-	await storage.fetch('game', '/game/');
+		await storage.fetch('game',`/game/?${window.location.href.split('?')[1]}`);
+
+		sessionStorage.setItem('game', JSON.stringify(JSON.parse(`{${JSON.parse(sessionStorage.getItem('game'))[0]}}`).data));
+
+		sessionStorage.setItem('game-ttl', 'infinity');
+
+	} else {
+
+		//window.location = "https://ryanspice.com/";
+
+	}
+
+	// get copy
+
 	await storage.fetch('copy', '/en/copy/copy.json');
+
+	// instanciate app
 
 	window.home = await new ax();
 
