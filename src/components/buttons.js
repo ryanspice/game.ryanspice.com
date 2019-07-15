@@ -31,7 +31,7 @@ class Buttons extends AsyncView {
 	innerHTML: string = `
 	<div class=" writeup" style="font-size: 1.239em; width: 98%; margin-left: 0px;">
 
-		<p><a id ="play" href="" style=" color:rgba(25,25,25, 0.75) !important;
+		<p><a id ="play" href="" style=" 
 			-webkit-text-stroke-width: 1.5px;
 			-webkit-text-stroke-color:rgba(75,25,25,0.75);
 			-webkit-text-fill-color: rgba(75,25,25,0.75);text-outline: 2px rgba(75,25,25,0.75) !important;">

@@ -72,6 +72,10 @@ window.onload = async function onload(evt){
 				* {
 					${data.font}
 				}
+				a {
+
+//						color:${data.colour2} !important;
+				}
 				video {
 					border-top-left-radius:  ${data.radius} !important;
 					border-top-right-radius:  ${data.radius} !important;
