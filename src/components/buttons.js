@@ -44,7 +44,7 @@ class Buttons extends AsyncView {
 	</div>
 	`;
 	mounted = function(e){
-		this.setAttribute('controls','');
+
 	}
 }
 
