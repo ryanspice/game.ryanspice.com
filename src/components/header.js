@@ -10,7 +10,7 @@ class Header extends V {
 	renderTo: string = `main`;
 	style = `margin-top:45.25vh; `
 	className = ``;
-	mounted: any = () => {
+	mounted: any = function(){
 
 		feather.replace();
 	};
@@ -23,9 +23,29 @@ class Header extends V {
 			<a href="https://www.linkedin.com/in/ryan-spice-finnie-510a295b/" target="_blank"><i data-feather="linkedin" ></i></a>
 		</span>
 
-		<h2 >game.ryanspice.com</h2>
+		<h2 >game.ryanspice.com / ${String(window.location.href.split('=')[1]).toLowerCase()}</h2>
 
 		<ul>
+
+			<li>
+
+				<a href="https://ryanspice.com/?old#games"> games </a>
+
+			  <div class="dropdown-content acrylic">
+				<h5><a style="color:white;" href="?game=SnowBoarding" />SnowBoarding</a></h5>
+				<h5><a style="color:white;" href="?game=ReverenceLost" />ReverenceLost</a></h5>
+				<h5><a style="color:white;" href="?game=FlappyFish" />FlappyFish</a></h5>
+				<h5><a style="color:white;" href="?game=KongQuest" />KongQuest</a></h5>
+				<h5><a style="color:white;" href="?game=Bovxel" />Bovxel</a></h5>
+<!--
+				<h5><a href="?game=Fabagohey" />Fabagohey</a></h5>
+
+					<h5><a href="?game=Dodgeball" />Dodgeball</a></h5>
+					-->
+			  </div>
+
+			</li>
+
 
 			<li>
 

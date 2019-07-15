@@ -554,7 +554,7 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
 																								 * @type {[type]}
 																								 */
 
-															                    this.visuals.image_ext(this.gallery[2],this.app.client.setWidth/2,170-this.sy*0.75,0.75 + ( 1 * Math.cos(new Date().getTime()/360)/100),1,1);
+															                    this.visuals.image_ext(this.gallery[2],this.app.client.setWidth/2,170-this.sy*0.75,0.6 + ( 1 * Math.cos(new Date().getTime()/360)/100),1,1);
 				                                }
 				    },
 
@@ -602,11 +602,7 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
 									 * @type {[type]}
 									 */
 
-									 this.sy = s/2;
-                    this.visuals.image_ext(this.gallery[0],this.app.client.setWidth/2,190-this.sy*0.75,0.75 + ( 1.1 * Math.sin(new Date().getTime()/1860)/100),0.1,1);
-                    this.visuals.image_ext(this.gallery[0],this.app.client.setWidth/2,190-this.sy*0.75,0.75 + ( 0.9 * Math.sin(new Date().getTime()/660)/100),0.1,1);
-
-                    this.visuals.image_ext(this.gallery[0],this.app.client.setWidth/2,190-this.sy*0.75,0.75 + ( 1 * Math.cos(new Date().getTime()/360)/100),1,1);
+                    this.visuals.image_ext(this.gallery[0],this.app.client.setWidth/2,190-(s),0.6 + ( 1 * Math.cos(new Date().getTime()/360)/100),1,1);
 
 								break;
 								case 'fr':
@@ -644,7 +640,7 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
 																			 * @type {[type]}
 																			 */
 
-										                    this.visuals.image_ext(this.gallery[3],this.app.client.setWidth/2,170-this.sy*0.75,0.6 + ( 1 * Math.cos(new Date().getTime()/360)/100),1,1);
+										                    this.visuals.image_ext(this.gallery[3],this.app.client.setWidth/2,170-this.sy*0.75,0.58 + ( 1 * Math.cos(new Date().getTime()/360)/100),1,1);
 
 								break;
 								case 'rv':
@@ -771,7 +767,7 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
 									 * @type {[type]}
 									 */
 
-                    this.visuals.image_ext(this.gallery[1],this.app.client.setWidth/2,170-this.sy*0.75,0.75 + ( 1 * Math.cos(new Date().getTime()/360)/100),1,1);
+                    this.visuals.image_ext(this.gallery[1],this.app.client.setWidth/2,170-this.sy*0.75,0.60 + ( 1 * Math.cos(new Date().getTime()/360)/100),1,1);
 
 
 								break;
