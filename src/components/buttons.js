@@ -9,7 +9,7 @@ class Buttons extends AsyncView {
 	type: string = 'section';
 	renderTo: string = `main`;
 	sequence: number = 3;
-	className:string = ``;
+	className:string = `theme`;
 
 	style:string = `-webkit-box-shadow: 0 0 2px 1px rgba(25,25,25, 0.75);
 	-moz-box-shadow: 0 0 2px 1px rgba(25,25,25, 0.75);
@@ -31,20 +31,24 @@ class Buttons extends AsyncView {
 	innerHTML: string = `
 	<div class=" writeup" style="font-size: 1.239em; width: 98%; margin-left: 0px;">
 
-		<p><a href="https://ryanspice.com/ReverenceLost/" style=" color:rgba(25,25,25, 0.75) !important;
+		<p><a id ="play" href="" style=" color:rgba(25,25,25, 0.75) !important;
 			-webkit-text-stroke-width: 1.5px;
 			-webkit-text-stroke-color:rgba(75,25,25,0.75);
 			-webkit-text-fill-color: rgba(75,25,25,0.75);text-outline: 2px rgba(75,25,25,0.75) !important;">
 
 			</a>
-			<a href="https://ryanspice.com/ReverenceLost/" class="menulist border_nav" style="padding:1%;">Play Now</a>
-			<a href="https://ryanspice.com/ReverenceLost/" class="menulist border_nav" style="padding:1%;">Source</a>
+			<a id ="bplay" href="" class="menulist border_nav" style="padding:1%;">Play Now</a>
+			<a id ="bsource" href="" class="menulist border_nav" style="padding:1%;">Source</a>
 			<a href="https://ryanspice.com/" class="menulist border_nav" style="padding:1%;float:right">RyanSpice.com</a>
 		</p>
 	</div>
 	`;
 	mounted = function(e){
+		this.style = "border-top-style: none;";
 
+		const data = sessionStorage.getObject('game').data;
+		document.getElementById('bplay').href = data.buttons.play;
+		document.getElementById('bsource').href = data.buttons.source;
 	}
 }
 

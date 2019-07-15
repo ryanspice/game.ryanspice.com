@@ -78,7 +78,7 @@ window.onload = async function onload(evt){
 					border-top-left-radius:  ${data.radius} !important;
 					border-top-right-radius:  ${data.radius} !important;
 				}
-        .pane, .border_nav {
+        .theme, .pane, .border_nav {
 					background:${data.colour2} !important;
 					border-radius: ${data.radius} !important;
 					-webkit-box-shadow:0 0 2px 1px ${data.colour} !important;
