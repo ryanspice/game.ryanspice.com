@@ -11,8 +11,8 @@ class Copy extends AsyncView {
 	sequence: number = 6;
 
 	mounted: Function = async function(elm){
-
-		const data = await (await fetch('/api/en/copy/copy.json')).json();
+		
+		const data = JSON.parse(sessionStorage.getItem('copy'));
 
 		this.innerHTML = `
 			<p>

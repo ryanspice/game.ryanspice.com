@@ -25,6 +25,7 @@ ax.pre = async function(){
 	window['async-2018-mvc'].entry.sort((a,b)=>{return (a.sequence?a.sequence:0)-(b.sequence?b.sequence:0)});
 	if(document.getElementsByTagName('loader')[0])
 		document.getElementsByTagName('loader')[0].remove();
+
 };
 
 /**
@@ -43,8 +44,13 @@ ax.post = async function(){
  * @return {[type]}     [description]
  */
 
-window.onload = function onload(evt){
+window.onload = async function onload(evt){
 
-	window.home = new ax();
+	let storage = new ax.storage();
+
+	await storage.fetch('game', '/game/');
+	await storage.fetch('copy', '/en/copy/copy.json');
+
+	window.home = await new ax();
 
 };
