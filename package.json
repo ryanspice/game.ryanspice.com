@@ -13,7 +13,7 @@
 		"build:dev": "yarn build",
 		"build:prod": "yarn prod",
 		"assets": "yarn parallel:assets && yarn docs",
-		"docs": "yarn esdoc",
+		"docs": "yarn esdoc -c ./node_modules/async.2018/.esdoc.json",
 		"clean:all": "yarn clean:dist && yarn clean:lib",
 		"clean:install": "rimraf node_modules",
 		"clean:dist": "rimraf dist",
