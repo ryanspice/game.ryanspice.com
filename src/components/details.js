@@ -25,13 +25,13 @@ export default [
 			if (!sessionStorage.getItem('game-ttl'))
 				return;
 
-			const data = JSON.parse(sessionStorage.getItem('game'));
+			const data = sessionStorage.getObject('game').data;
 
 			this.innerHTML = `
-				${data.info[0]}
-				${data.info[1]}
-				${data.info[2]}
-				${data.info[3]}
+				<h2 style="width:100%;text-align:center;">${data.info[0]}</h3>
+				<h3 style="width:100%;text-align:center;">${data.info[1]}</h3>
+				<h3 style="width:100%;text-align:center;">${data.info[2]}</h3>
+				<h3 style="width:100%;text-align:center;">${data.info[3]}</h3>
 			`;
 		}
 	}),
@@ -42,7 +42,7 @@ export default [
 			if (!sessionStorage.getItem('game-ttl'))
 				return;
 
-			const data = JSON.parse(sessionStorage.getItem('game'));
+			const data = sessionStorage.getObject('game').data;
 
 			this.innerHTML = `
 				<img src='${data.images[0]}' />

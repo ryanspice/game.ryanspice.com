@@ -20,12 +20,22 @@ class Video extends AsyncView {
 	position: relative; left: 6px; margin:0px auto;
 	border-bottom-left-radius: 0px !important; border-bottom-right-radius: 0px !important;`;
 
-	innerHTML: string = `
-		<source src="https://ryanspice.com/R6.1/videos/video_SnowBoarding.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-	`;
 	mounted = function(e){
+
+		if (!sessionStorage.getItem('game-ttl'))
+			return;
+
+	const data = sessionStorage.getObject('game').data;
+
+		this.innerHTML = `
+			<source src='${data.video}' type="video/mp4">
+				Your browser does not support the video tag.
+		`;
+
 		this.setAttribute('controls','');
+		this.setAttribute('muted','');
+		this.muted = true;
+
 	}
 }
 

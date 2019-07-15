@@ -56,7 +56,10 @@ window.onload = async function onload(evt){
 
 		await storage.fetch('game',`/game/?${window.location.href.split('?')[1]}`);
 
-		sessionStorage.setItem('game', JSON.stringify(JSON.parse(`{${JSON.parse(sessionStorage.getItem('game'))[0]}}`).data));
+		sessionStorage.setItem('game',sessionStorage.getObject('game')[0]);
+		//console.log()
+
+//		sessionStorage.setItem('game', JSON.stringify(JSON.parse(`{${JSON.parse(sessionStorage.getItem('game'))[0]}}`).data));
 
 		sessionStorage.setItem('game-ttl', 'infinity');
 

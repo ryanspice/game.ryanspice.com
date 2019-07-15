@@ -7,6 +7,9 @@ import {
 	mvc
 } from "async.2018/src";
 
+import "async.2018/src/core/def/storage/storage.getobject";
+import "async.2018/src/core/def/storage/storage.setobject";
+
 const AsyncTemplate = pipe;
 AsyncTemplate.storage = storage;
 
