@@ -259,11 +259,6 @@ window.onload = async function onload(evt){
 					</h2>
 				</div>
 			</span>
-
-
-
-
-
 			<h2 style="padding-top:1rem;padding-bottom:1rem;">GameMaker Games</h2>
 <div class="tile tileDodgeball" onclick="this.children[1].children[1].click()">
 <img src="https://ryanspice.com/images/image_title_Dodgeball.png">
@@ -291,16 +286,14 @@ window.onload = async function onload(evt){
 		`,
 		sequence:5,
 		mounted:function(){
-			//setTimeout(()=>{
 
-				(document.getElementsByTagName('section')[0]).remove();
-				(document.getElementsByTagName('section')[0]).remove();
-				(document.getElementsByTagName('section')[0]).remove();
-				(document.getElementsByTagName('video')[0]).remove();
+			(document.getElementsByTagName('section')[0]).remove();
+			(document.getElementsByTagName('section')[0]).remove();
+			(document.getElementsByTagName('section')[0]).remove();
+			(document.getElementsByTagName('video')[0]).remove();
 
-			//},200)
 		}
-			})
+	})
 
 
 	}
