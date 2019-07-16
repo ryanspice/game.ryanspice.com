@@ -182,7 +182,7 @@ window.onload = async function onload(evt){
 		new V({
 			type:'section',
 			renderTo:'main',
-			innerHTML:`<div class="row textWhite">
+			innerHTML:`</script><div class="row textWhite">
 			<div class="large-24 small-24 columns add-margin " id="games" >
 				<h3 class="textWhite fontBlack" hidden>
 					<a class="pNav" onclick="Main.Portfolio.Change(this)" id="gamesERs">Games</a>
@@ -292,7 +292,25 @@ window.onload = async function onload(evt){
 
 	//sort by sequence
 	window['async-2018-mvc'].entry.sort((a,b)=>{return (a.sequence?a.sequence:0)-(b.sequence?b.sequence:0)});
+	function includeJS(p_file, callback) {
+	    var v_js  = document.createElement('script');
+	    v_js.type = 'text/javascript';
+	    v_js.src = p_file;
 
+	    v_js.onreadystatechange = callback;
+	    v_js.onload = callback;
+
+	    document.getElementsByTagName('head')[0].appendChild(v_js);
+			document.on
+	}
+	await includeJS('https://ryanspice.com/app.js', ()=>{
+
+		window.document.dispatchEvent(new Event("DOMContentLoaded", {
+			bubbles: true,
+			cancelable: true
+			}));
+
+	})
 
 	// instanciate app
 
