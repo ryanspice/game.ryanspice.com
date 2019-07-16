@@ -31,7 +31,7 @@ class Header extends V {
 
 			<li>
 
-				<a href="https://ryanspice.com/?old#games"> games </a>
+				<a href="https://ryanspice.com/game"> games </a>
 
 			  <div class="dropdown-content acrylic">
 				<h5><a style="color:white;" href="?game=SnowBoarding" />SnowBoarding</a></h5>
