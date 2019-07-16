@@ -182,7 +182,7 @@ window.onload = async function onload(evt){
 		new V({
 			type:'section',
 			renderTo:'main',
-			innerHTML:`</script><div class="row textWhite">
+			innerHTML:`<div class="row textWhite">
 			<div class="large-24 small-24 columns add-margin " id="games" >
 				<h3 class="textWhite fontBlack" hidden>
 					<a class="pNav" onclick="Main.Portfolio.Change(this)" id="gamesERs">Games</a>
@@ -196,7 +196,9 @@ window.onload = async function onload(evt){
 					<a class="pNav" onclick="Main.Portfolio.Change(this)" style="opacity:0.18;">Audio</a>
 				</h3>
 
+								<h2 style="padding-top:1rem;padding-bottom:1rem;">JavaScript Games</h2>
 				<div class="tile gametile" onclick="this.children[1].children[1].click()">
+
 					<img src="https://ryanspice.com/images/image_title_ReverenceLost.png" style="transform:scale(0.5);max-height:256px;position:relative;top:-40px;">
 					<h2>
 						<sub>HTML5</sub>
@@ -231,37 +233,49 @@ window.onload = async function onload(evt){
 						<a  href="?game=Bovxel"> Read More</a>
 					</h2>
 				</div>
-				<div class="tile tileDodgeball" onclick="this.children[1].children[1].click()">
-					<img src="https://ryanspice.com/images/image_title_Dodgeball.png">
-					<h2>
-						<sub>GameMaker (Win32)</sub>
-						<a target="_blank" href="https://ryanspice.com/Dodgeball/Dodgeball.zip"> Download</a>
-					</h2>
-				</div>
-			</div>
 
-			<span id="applications" style="display:none;">
-				<div class="tiles" style="display:block !important;">
+
+			<span id="applications" style="">
+			<h2 style="padding-top:1rem;padding-bottom:1rem;">JavaScript Applications</h2>
+				<div class="tile" style="display:block !important;">
 					<h2>
-						<a href="#"> Read More</a>
+						<sub>HTML5</sub>
+							<a href="#"> Read More</a>
 					</h2>
 				</div>
-				<div class="tiles" style="display:block !important;">
+				<div class="tile" style="display:block !important;">
 					<h2>AudioIntel
 						<a href="#"> Read More</a>
 					</h2>
 				</div>
-				<div class="tiles" style="display:block !important;">
+				<div class="tile" style="display:block !important;">
 					<h2>FutureVault
 						<a href="#"> Read More</a>
 					</h2>
 				</div>
-				<div class="tiles" style="display:block !important;">
+				<div class="tile" style="display:block !important;">
 					<h2>JaTech Ecommerce
 						<a href="#"> Read More</a>
 					</h2>
 				</div>
 			</span>
+
+
+
+
+
+			<h2 style="padding-top:1rem;padding-bottom:1rem;">GameMaker Games</h2>
+<div class="tile tileDodgeball" onclick="this.children[1].children[1].click()">
+<img src="https://ryanspice.com/images/image_title_Dodgeball.png">
+<h2>
+<sub>GameMaker (Win32)</sub>
+<a target="_blank" href="https://ryanspice.com/Dodgeball/Dodgeball.zip"> Download</a>
+</h2>
+</div>
+
+
+
+
 
 			<span id="concepts"></span>
 
@@ -269,7 +283,12 @@ window.onload = async function onload(evt){
 
             <span id="soundcloud" style="display:none;"></span>
 
-		</div>`,
+		<h2 style="padding-top:1rem;padding-bottom:1rem;">Homestead</h2>
+					</div>
+
+		</div>
+
+		`,
 		sequence:5,
 		mounted:function(){
 			//setTimeout(()=>{
