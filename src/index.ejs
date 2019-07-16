@@ -199,6 +199,7 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
 
 <script rel="prefetch" type="application/x-javascript" >
 
+		if (window.location.href.split('?').length>1){
 				/////////////////////////////
 				/// RyanSpice.Com - Spice.js
 				/// 08/22/2014
@@ -978,11 +979,17 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
 						}
 					}
 				};
+
+			}
 </script>
 
 <!-- SPICEJS -->
 
 <script  rel="prefetch"  defer type="application/x-javascript">
+
+
+
+		if (window.location.href.split('?').length>1){
 				/*
 				 ,-.
 				(   `     o            o
@@ -3401,13 +3408,14 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
 				}());
 
 
-
+}
 	</script>
 
 <!-- STATE -->
 
 <script rel=prefetch type="text/javascript">
 
+if (window.location.href.split('?').length>1){
 	var START = window.location.search.split("=").length>1?window.location.search.split("=")[1]:'';
 
 
@@ -3761,7 +3769,7 @@ _Main.prototype = {
                 }
         };
 
-
+}
 
 			  </script>
 
